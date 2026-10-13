@@ -19,13 +19,35 @@
 
     <main>
         <section class="section-hero relative overflow-hidden" style="background:radial-gradient(ellipse at center,#2a1a4a 0%,#0c0c1f 70%);">
-            <!-- Collage de cartas decorativo (acercadas al centro) -->
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-75">
-                <img src="category-images/tcg-pokemon-card.webp" alt="" aria-hidden="true" class="hidden md:block absolute left-[19%] top-1/2 -translate-y-1/2 w-48 -rotate-12 drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]" onerror="this.style.display='none'" />
-                <img src="category-images/tcg-digimon-card.webp" alt="" aria-hidden="true" class="hidden md:block absolute left-[31%] top-1/2 -translate-y-1/2 w-52 -rotate-6 drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]" onerror="this.style.display='none'" />
-                <img src="category-images/tcg-yugioh-card.webp" alt="" aria-hidden="true" class="hidden md:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-64 z-0 drop-shadow-[0_20px_50px_rgba(0,0,0,0.85)]" onerror="this.style.display='none'" />
-                <img src="category-images/tcg-onepiece-card.webp" alt="" aria-hidden="true" class="hidden md:block absolute right-[31%] top-1/2 -translate-y-1/2 w-54 rotate-6 drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]" onerror="this.style.display='none'" />
-                <img src="category-images/tcg-magic-card.webp" alt="" aria-hidden="true" class="hidden md:block absolute right-[19%] top-1/2 -translate-y-1/2 w-48 rotate-12 drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]" onerror="this.style.display='none'" />
+            <!-- Abanico de cartas estilo baraja / mano de póker -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-85">
+                <div class="relative w-72 h-96 flex items-center justify-center -translate-y-4">
+                    <!-- Carta 1 (Izquierda exterior: Pokémon) -->
+                    <img src="category-images/tcg-pokemon-card.webp" alt="" aria-hidden="true" 
+                        class="absolute w-52 md:w-56 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] transition-transform" 
+                        style="transform-origin: 50% 125%; transform: rotate(-26deg) translate(-50px, 15px); z-index: 1;" 
+                        onerror="this.style.display='none'" />
+                    <!-- Carta 2 (Izquierda media: Digimon) -->
+                    <img src="category-images/tcg-digimon-card.webp" alt="" aria-hidden="true" 
+                        class="absolute w-52 md:w-56 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] transition-transform" 
+                        style="transform-origin: 50% 125%; transform: rotate(-13deg) translate(-25px, 5px); z-index: 2;" 
+                        onerror="this.style.display='none'" />
+                    <!-- Carta 3 (Centro: Yu-Gi-Oh!) -->
+                    <img src="category-images/tcg-yugioh-card.webp" alt="" aria-hidden="true" 
+                        class="absolute w-52 md:w-56 drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] transition-transform" 
+                        style="transform-origin: 50% 125%; transform: rotate(0deg) translate(0px, 0px); z-index: 3;" 
+                        onerror="this.style.display='none'" />
+                    <!-- Carta 4 (Derecha media: One Piece) -->
+                    <img src="category-images/tcg-onepiece-card.webp" alt="" aria-hidden="true" 
+                        class="absolute w-52 md:w-56 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] transition-transform" 
+                        style="transform-origin: 50% 125%; transform: rotate(13deg) translate(25px, 5px); z-index: 4;" 
+                        onerror="this.style.display='none'" />
+                    <!-- Carta 5 (Derecha exterior: Magic) -->
+                    <img src="category-images/tcg-magic-card.webp" alt="" aria-hidden="true" 
+                        class="absolute w-52 md:w-56 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] transition-transform" 
+                        style="transform-origin: 50% 125%; transform: rotate(26deg) translate(50px, 15px); z-index: 5;" 
+                        onerror="this.style.display='none'" />
+                </div>
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#0c0c1f]/60 via-transparent to-[#0c0c1f]"></div>
 
