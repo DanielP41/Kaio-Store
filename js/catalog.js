@@ -439,7 +439,73 @@
         });
     };
 
+    const renderCardHTML = (product) => {
+        const id = product.id;
+        const name = cleanText(product.name);
+        const price = product.price || formatMoney(product.priceNum);
+        const img = product.img || '';
+        const category = cleanText(product.category);
+        const url = product.url || 'full.html';
+        const isOutOfStock = product.stock != null && Number(product.stock) <= 0;
+
+        return `
+            <div class="catalog-card group relative" id="product-${id}" data-product-id="${id}" data-product-url="${url}" data-price="${product.priceNum}" data-category="${category}">
+                <div class="catalog-card-media catalog-card-media-portrait relative overflow-hidden bg-surface-container">
+                    <img src="${img}" alt="${name}" class="catalog-card-image w-full h-full object-cover" loading="lazy" />
+                    ${isOutOfStock ? '<div class="kaio-stock-badge absolute top-2 left-2 z-10 px-2 py-1 bg-error text-on-error font-headline font-black text-[9px] uppercase tracking-widest">Agotado</div>' : ''}
+                    <button class="catalog-card-favorite absolute top-2 right-2 p-2 bg-surface/60 backdrop-blur-md rounded-full text-on-surface hover:text-tertiary transition-colors z-10" data-wishlist-product="${id}" onclick="event.stopPropagation()">
+                        <span class="material-symbols-outlined text-sm">favorite</span>
+                    </button>
+                    <button class="quickview-btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0c0c1f]/80 backdrop-blur-lg rounded-full w-12 h-12 flex items-center justify-center text-[#fff] opacity-0 group-hover:opacity-100 transition-opacity hover:text-secondary shadow-[0_0_20px_rgba(0,0,0,0.5)] z-10" onclick="event.stopPropagation(); event.preventDefault(); if (window.openQuickView) window.openQuickView('${id}');">
+                        <span class="material-symbols-outlined">visibility</span>
+                    </button>
+                </div>
+                <div class="catalog-card-content p-4">
+                    <span class="catalog-card-label font-label text-[10px] uppercase tracking-widest text-secondary">${category}</span>
+                    <h4 class="catalog-card-title font-headline font-bold text-sm uppercase truncate mt-1">${name}</h4>
+                    <div class="catalog-card-price-row flex items-center justify-between mt-3">
+                        <span class="catalog-card-price font-headline font-black text-lg text-primary">${price}</span>
+                        <button class="catalog-card-cart p-2 bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed rounded-sm hover:shadow-[0_0_12px_rgba(255,144,106,0.6)] transition-all" data-cart-product="${id}" onclick="event.stopPropagation()">
+                            <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    };
+
+    const renderCatalogGrid = () => {
+        const grid = document.querySelector('.catalog-grid:not(#recentCatalogGrid)');
+        if (!grid) return;
+
+        // Si ya contiene tarjetas manuales, no sobreescribir
+        if (grid.children.length > 0) return;
+
+        const current = currentPath();
+        const allProducts = Array.from(state.products.values());
+        let toRender = [];
+
+        if (current === 'full.html' || current === 'index.html' || current === '') {
+            // En Home / Destacados: mostrar los 8 o 12 productos más llamativos
+            toRender = allProducts.slice(0, 12);
+        } else {
+            // Filtrar por sección o por url de la página actual
+            const currentSection = getSectionByUrl(current).id;
+            toRender = allProducts.filter((p) => p.url === current || p.section === currentSection);
+            
+            // Si la categoría específica no tiene suficientes, fallback a productos que correspondan a su sección
+            if (toRender.length === 0) {
+                toRender = allProducts.filter((p) => p.section === currentSection);
+            }
+        }
+
+        if (toRender.length > 0) {
+            grid.innerHTML = toRender.map(renderCardHTML).join('');
+        }
+    };
+
     const hydratePage = (root = document) => {
+        renderCatalogGrid();
         const products = extractProductsFromRoot(root, currentPath(), true);
         injectSorting();
         decorateOutOfStock(root);
@@ -455,6 +521,7 @@
         parseMoney,
         normalizeText,
         slugify,
+        renderCatalogGrid,
         hydratePage,
         ensureLoaded,
         resolveProduct,
@@ -467,9 +534,13 @@
         getRecentProducts
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
+        importStaticProducts();
+        renderCatalogGrid();
         hydratePage();
         revealProductFromUrl();
-        ensureLoaded();
+        await ensureLoaded();
+        renderCatalogGrid();
+        hydratePage();
     });
 })();
