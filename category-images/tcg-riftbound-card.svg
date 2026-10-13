@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 460">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09c6f9"/>
+      <stop offset="100%" stop-color="#045de9"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="460" rx="20" fill="#1d1f48"/>
+  <rect x="14" y="14" width="292" height="432" rx="16" fill="#262a61" stroke="#050716" stroke-width="4"/>
+  <text x="28" y="58" fill="#eaf6ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">RIFTBOUND</text>
+  <rect x="32" y="86" width="256" height="200" rx="14" fill="url(#bg)"/>
+  <path d="M160 120l36 58-36 58-36-58 36-58Z" fill="#f4fdff"/>
+  <path d="M160 144l21 34-21 34-21-34 21-34Z" fill="#80d7ff"/>
+  <text x="160" y="340" text-anchor="middle" fill="#eaf6ff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Jinx</text>
+  <text x="160" y="374" text-anchor="middle" fill="#b5d5ff" font-family="Arial, sans-serif" font-size="16">Loose Cannon</text>
+</svg>

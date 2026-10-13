@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">Carta estilo One Piece</title>
+  <desc id="desc">Ilustracion local para la seccion Centro TCG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="55%" stop-color="#d8b4fe"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="600" rx="28" fill="#1f1233"/>
+  <rect x="16" y="16" width="388" height="568" rx="20" fill="url(#bg)"/>
+  <g opacity="0.18" stroke="#0f172a" stroke-width="3">
+    <path d="M48 120h324M48 160h324M48 200h324M48 240h324M48 280h324M48 320h324M48 360h324M48 400h324M48 440h324"/>
+    <path d="M78 98v366M150 98v366M222 98v366M294 98v366"/>
+  </g>
+  <path d="M148 390c34-102 90-182 166-226 10 54 38 102 76 148-96 2-160 24-242 78z" fill="#f5d0fe" fill-opacity="0.9"/>
+  <path d="M160 392c18-44 44-74 78-96 18 34 44 68 76 102-54 8-106 6-154-6z" fill="#fde68a" fill-opacity="0.8"/>
+  <rect x="36" y="38" width="186" height="46" rx="12" fill="#111827" fill-opacity="0.86"/>
+  <text x="52" y="69" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">ONE PIECE</text>
+  <text x="42" y="512" fill="#2e1065" font-size="44" font-family="Arial, sans-serif" font-weight="800">Gear 5</text>
+  <text x="42" y="550" fill="#3b0764" fill-opacity="0.84" font-size="24" font-family="Arial, sans-serif">Booster · Starter · Singles</text>
+</svg>

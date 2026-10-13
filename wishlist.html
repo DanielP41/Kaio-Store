@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Favoritos | KAIO-STORE</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/config.js"></script>
+    <script src="js/seo.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+    <div id="header-container"></div>
+
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <header class="mb-10">
+            <p class="font-label text-xs uppercase tracking-[0.32em] text-tertiary">Tu colección</p>
+            <h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mt-2">Mis <span class="text-tertiary italic">favoritos</span></h1>
+            <p id="wishlistCount" class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-3">0 productos guardados</p>
+        </header>
+
+        <!-- Estado vacío -->
+        <div id="wishlistEmpty" class="flex flex-col items-center justify-center py-24 text-center">
+            <span class="material-symbols-outlined text-7xl text-outline opacity-30 mb-4">favorite</span>
+            <p class="font-headline text-2xl font-black uppercase tracking-tight mb-2">Tu lista está vacía</p>
+            <p class="font-body text-on-surface-variant max-w-md mb-6">Tocá el corazón en cualquier producto para guardarlo acá y volver después a comprarlo.</p>
+            <a href="full.html" class="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-6 py-3 font-headline font-black uppercase tracking-widest text-sm hover:shadow-[0_0_24px_rgba(255,144,106,0.4)] transition-all">
+                Explorar catálogo
+            </a>
+        </div>
+
+        <!-- Grilla -->
+        <div id="wishlistGrid" class="catalog-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="cart-container"></div>
+    <div id="whatsapp-container"></div>
+
+    <script src="js/products-data.js?v=20260503-1"></script>
+    <script src="js/catalog.js?v=20260509-1"></script>
+    <script src="js/cart.js?v=20260509-1"></script>
+    <script src="js/ui.js?v=20260509-1"></script>
+    <script src="js/supabase-store.js?v=20260509-1"></script>
+    <script src="js/wishlist.js?v=20260509-1"></script>
+    <script src="js/components.js?v=20260423-1"></script>
+</body>
+</html>

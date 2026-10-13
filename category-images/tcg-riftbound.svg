@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">Carta estilo Riftbound</title>
+  <desc id="desc">Ilustracion local para la seccion Centro TCG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="45%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="600" rx="28" fill="#13071f"/>
+  <rect x="16" y="16" width="388" height="568" rx="20" fill="url(#bg)"/>
+  <path d="M114 422l56-226 74 126 60-164 12 264z" fill="#22d3ee" fill-opacity="0.82"/>
+  <path d="M90 434l64-54 42 36 70-80 76 56" fill="none" stroke="#fdf2f8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="142" cy="176" r="18" fill="#f472b6"/>
+  <circle cx="206" cy="142" r="12" fill="#f472b6"/>
+  <circle cx="254" cy="194" r="22" fill="#22d3ee"/>
+  <rect x="36" y="38" width="168" height="46" rx="12" fill="#0f172a" fill-opacity="0.82"/>
+  <text x="52" y="68" fill="#fdf2f8" font-size="24" font-family="Arial, sans-serif" font-weight="700">RIFTBOUND</text>
+  <text x="42" y="512" fill="#fdf2f8" font-size="42" font-family="Arial, sans-serif" font-weight="800">Origenes</text>
+  <text x="42" y="550" fill="#fdf2f8" fill-opacity="0.84" font-size="24" font-family="Arial, sans-serif">Starter · Booster · Jinx</text>
+</svg>

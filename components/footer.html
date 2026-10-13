@@ -1,0 +1,135 @@
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Recent Products Wrapper -->
+<div id="recentCatalogWrapper" class="hidden w-full max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-outline-variant/10">
+    <h3 class="font-headline text-3xl font-black uppercase tracking-tighter mb-8">Vistos <span class="text-secondary italic">recientemente</span></h3>
+    <div id="recentCatalogGrid" class="catalog-grid"></div>
+</div>
+
+<!-- Footer Component -->
+<footer class="bg-[#111127] w-full pt-10 pb-6">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-[220px_1fr_300px] gap-8 mb-6">
+            <div>
+                <div class="text-4xl font-black text-[#ff906a] mb-3 font-headline">KAIO-STORE</div>
+                <p class="font-body text-lg leading-relaxed text-[#aaa8c3] mb-4">La bóveda digital definitiva para manga, cómics y figuras de colección premium.</p>
+                <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-3">CUIT 30-71234567-8 · Buenos Aires, Argentina</p>
+                <div class="flex gap-2">
+                    <a href="mailto:contacto@kaio-store.com" target="_blank" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-[#0c0c1f] transition-all">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                    </a>
+                    <a href="https://instagram.com/kaiostore" target="_blank" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-[#0c0c1f] transition-all group">
+                        <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 group-hover:stroke-[#0c0c1f] stroke-on-surface transition-colors" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://wa.me/1234567890" target="_blank" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-[#0c0c1f] transition-all group">
+                        <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 group-hover:stroke-[#0c0c1f] stroke-on-surface transition-colors" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    </a>
+                    <a href="https://youtube.com/@kaiostore" target="_blank" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-[#0c0c1f] transition-all group">
+                        <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4 group-hover:stroke-[#0c0c1f] stroke-on-surface transition-colors" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <p class="font-label text-base uppercase tracking-[0.12em] text-on-surface-variant mb-3 font-bold">Principal</p>
+                    <ul class="space-y-2.5 font-body text-lg text-[#aaa8c3]">
+                        <li><a class="hover:text-primary transition-colors" href="full.html">Inicio</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="nuevos-ingresos.html">Nuevos ingresos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="ofertas.html">Ofertas</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="code.html">Checkout</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-label text-base uppercase tracking-[0.12em] text-on-surface-variant mb-3 font-bold">Colecciones</p>
+                    <ul class="space-y-2.5 font-body text-lg text-[#aaa8c3]">
+                        <li><a class="hover:text-primary transition-colors" href="manga.html">Manga</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="comics.html">Cómics</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="figuras.html">Figuras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-label text-base uppercase tracking-[0.12em] text-on-surface-variant mb-3 font-bold">Especiales</p>
+                    <ul class="space-y-2.5 font-body text-lg text-[#aaa8c3]">
+                        <li><a class="hover:text-primary transition-colors" href="tcg.html">Centro TCG</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="videojuegos.html">Videojuegos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="indumentaria.html">Indumentaria</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-label text-base uppercase tracking-[0.12em] text-on-surface-variant mb-3 font-bold">Ubicación</p>
+                <div id="kaioMap" style="height:160px;width:100%;border:1px solid rgba(70,70,92,0.25);"></div>
+                <p class="font-label text-base text-[#aaa8c3] mt-2">Buenos Aires, Argentina</p>
+                <a class="inline-block mt-3 font-label text-xs uppercase tracking-widest text-secondary hover:underline" href="legales.html">Ver legales y botón de arrepentimiento</a>
+            </div>
+        </div>
+
+        <div class="h-px bg-outline-variant/15 mb-4"></div>
+        <p class="font-body text-base text-[#aaa8c3] text-center">&copy; 2026 KAIO-STORE. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-3 pb-3 pt-2 md:hidden bg-[#0c0c1f]/95 backdrop-blur-2xl z-50 rounded-t-2xl border-t border-[#ffffff08] shadow-[0_-8px_32px_rgba(0,0,0,0.6)]">
+    <a class="flex flex-col items-center justify-center text-[#aaa8c3] hover:text-secondary transition-colors font-label text-[10px] font-bold uppercase tracking-wide gap-1" href="full.html">
+        <span class="material-symbols-outlined text-lg">home</span>
+        <span>Inicio</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-[#aaa8c3] hover:text-secondary transition-colors font-label text-[9px] font-bold uppercase tracking-wide gap-1" href="manga.html">
+        <span class="material-symbols-outlined text-lg">grid_view</span>
+        <span>Tienda</span>
+    </a>
+    <button id="cartBtnMobile" class="flex flex-col items-center justify-center text-[#aaa8c3] hover:text-secondary transition-colors font-label text-[9px] font-bold uppercase tracking-wide gap-1 relative">
+        <span class="material-symbols-outlined text-lg">shopping_bag</span>
+        <span>Carrito</span>
+        <span id="cartCountMobile" class="absolute -top-2 right-0 bg-tertiary text-on-tertiary text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-sm hidden">0</span>
+    </button>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function initKaioMap() {
+    const el = document.getElementById('kaioMap');
+    if (!el || el._leafletMap) return;
+
+    const LAT = -34.6037;
+    const LNG = -58.3816;
+
+    const map = L.map('kaioMap', {
+        center: [LAT, LNG],
+        zoom: 14,
+        zoomControl: false,
+        scrollWheelZoom: false,
+        attributionControl: false
+    });
+    el._leafletMap = map;
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    const icon = L.divIcon({
+        className: '',
+        html: `<div style="
+            width:28px;height:28px;
+            background:linear-gradient(135deg,#ff906a,#ff6c92);
+            border-radius:50% 50% 50% 0;
+            transform:rotate(-45deg);
+            border:2px solid #fff;
+            box-shadow:0 2px 12px rgba(255,144,106,0.6)">
+        </div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 28]
+    });
+
+    L.marker([LAT, LNG], { icon })
+        .addTo(map)
+        .bindPopup('<strong style="font-family:sans-serif;font-size:12px">KAIO-STORE</strong><br><span style="font-size:11px;color:#888">Buenos Aires, Argentina</span>', {
+            offset: [0, -20]
+        });
+
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+})();
+</script>

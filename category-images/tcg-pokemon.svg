@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">Carta estilo Pokemon</title>
+  <desc id="desc">Ilustracion local para la seccion Centro TCG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="55%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#fff7b0" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fff7b0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="600" rx="28" fill="#3b2a11"/>
+  <rect x="16" y="16" width="388" height="568" rx="20" fill="url(#bg)"/>
+  <circle cx="210" cy="220" r="150" fill="url(#glow)"/>
+  <path d="M132 390c42-96 112-161 170-176-4 56 22 101 66 146-92-10-145 2-236 30z" fill="#f97316" fill-opacity="0.92"/>
+  <path d="M138 390c44-40 89-66 141-76-26 28-40 58-45 90-26 2-56-2-96-14z" fill="#facc15" fill-opacity="0.92"/>
+  <path d="M116 188c42-44 98-72 158-72" fill="none" stroke="#fff7ed" stroke-width="16" stroke-linecap="round"/>
+  <rect x="34" y="34" width="352" height="54" rx="14" fill="#fff7ed" fill-opacity="0.88"/>
+  <text x="56" y="68" fill="#24160a" font-size="28" font-family="Arial, sans-serif" font-weight="700">Pokemon TCG</text>
+  <text x="44" y="514" fill="#fff7ed" font-size="46" font-family="Arial, sans-serif" font-weight="800">Edicion Fuego</text>
+  <text x="44" y="552" fill="#fff7ed" fill-opacity="0.85" font-size="24" font-family="Arial, sans-serif">Booster · Deck · Coleccion</text>
+</svg>

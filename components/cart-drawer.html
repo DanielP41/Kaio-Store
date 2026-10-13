@@ -1,0 +1,114 @@
+<!-- Cart Drawer Component -->
+<div id="cartOverlay" class="fixed inset-0 bg-black/60 z-[90] hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm"></div>
+
+<aside id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-low z-[95] translate-x-full transition-transform duration-500 ease-in-out flex flex-col shadow-[-8px_0_48px_rgba(0,0,0,0.6)]">
+    <div class="flex justify-between items-center px-6 py-5 border-b border-outline-variant/20">
+        <div>
+            <h2 class="font-headline text-xl font-black uppercase tracking-tight">Mi Carrito</h2>
+            <p id="cartDrawerCount" class="font-label text-xs text-on-surface-variant uppercase tracking-widest mt-0.5">0 productos</p>
+        </div>
+        <button id="cartClose" class="p-2 text-on-surface-variant hover:text-tertiary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+
+    <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <div id="cartEmpty" class="flex flex-col items-center justify-center h-full gap-4 text-on-surface-variant py-16">
+            <span class="material-symbols-outlined text-6xl opacity-20">shopping_bag</span>
+            <p class="font-label text-xs uppercase tracking-widest">Tu carrito está vacío</p>
+        </div>
+    </div>
+
+    <div id="cartFooter" class="hidden border-t border-outline-variant/20 bg-surface-container">
+        <div class="px-6 pt-5 pb-4 space-y-4 border-b border-outline-variant/10">
+            <div class="rounded-sm border border-outline-variant/20 bg-surface-container-high px-4 py-4">
+                <div class="flex items-center justify-between gap-4 mb-3">
+                    <div>
+                        <p class="font-label text-[10px] uppercase tracking-[0.22em] text-secondary">Beneficio activo</p>
+                        <p class="font-headline font-bold text-sm uppercase">Camino al envio gratis</p>
+                    </div>
+                    <span id="cartFreeShippingBadge" class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">$0 restantes</span>
+                </div>
+                <div class="cart-progress-track">
+                    <div id="cartFreeShippingBar" class="cart-progress-bar" style="width:0%"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="cart-meta-card">
+                    <span class="material-symbols-outlined text-secondary text-base">local_shipping</span>
+                    <div>
+                        <p class="cart-meta-label">Despacho</p>
+                        <p id="cartEta" class="cart-meta-value">24 hs habiles</p>
+                    </div>
+                </div>
+                <div class="cart-meta-card">
+                    <span class="material-symbols-outlined text-tertiary text-base">verified_user</span>
+                    <div>
+                        <p class="cart-meta-label">Checkout</p>
+                        <p id="cartPaymentNote" class="cart-meta-value">Seguro local</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Coupon Code -->
+        <div class="px-6 pt-5 pb-3">
+            <div class="flex gap-2">
+                <input id="couponInput" type="text" placeholder="CÓDIGO DE DESCUENTO"
+                    class="flex-1 bg-surface-container-high border border-outline-variant/30 text-on-surface font-label text-[10px] uppercase tracking-widest px-3 py-2.5 focus:ring-1 focus:ring-secondary focus:outline-none placeholder:text-outline" />
+                <button id="couponBtn" class="px-4 py-2 border border-secondary text-secondary font-label text-[10px] uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all whitespace-nowrap">
+                    APLICAR
+                </button>
+            </div>
+            <p id="couponMsg" class="font-label text-[10px] mt-2 hidden"></p>
+        </div>
+        
+        <!-- Points Redeem Section -->
+        <div id="cartPointsRedeem" class="px-6 pb-2 hidden"></div>
+
+        <!-- Price Breakdown -->
+        <div class="px-6 pb-4 space-y-2 border-t border-outline-variant/10 pt-4">
+            <div class="flex justify-between font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="flex justify-between font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+                <span>Envío</span>
+                <span id="cartShipping" class="text-secondary font-bold">GRATIS</span>
+            </div>
+            <div id="cartDiscountRow" class="hidden justify-between font-label text-[10px] uppercase tracking-widest text-tertiary">
+                <span>Descuento</span>
+                <span id="cartDiscount">-$0.00</span>
+            </div>
+            <div id="cartPointsDiscountRow" class="hidden justify-between font-label text-[10px] uppercase tracking-widest text-secondary">
+                <span>Descuento Puntos Kaio</span>
+                <span id="cartPointsDiscount">-$0.00</span>
+            </div>
+            <div class="flex justify-between items-center pt-3 border-t border-outline-variant/20">
+                <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Total estimado</span>
+                <span id="cartTotal" class="font-headline text-2xl font-black text-primary">$0.00</span>
+            </div>
+            <p id="cartFreeShippingMsg" class="font-label text-[10px] text-secondary hidden text-center pt-1"></p>
+        </div>
+
+        <!-- Actions -->
+        <div class="px-6 pb-6 space-y-3">
+            <a href="code.html" class="block w-full bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed py-4 text-center font-headline font-black uppercase tracking-widest hover:shadow-[0_0_30px_rgba(255,144,106,0.4)] transition-all rounded-sm">
+                Ir al Checkout
+            </a>
+            <button id="cartClear" class="w-full border border-outline-variant/20 text-on-surface-variant py-3 font-label text-xs uppercase tracking-widest hover:border-tertiary hover:text-tertiary transition-colors rounded-sm">
+                Vaciar Carrito
+            </button>
+            <button id="cartContinue" class="w-full border border-outline-variant/30 text-on-surface-variant py-3 font-label text-xs uppercase tracking-widest hover:border-secondary hover:text-secondary transition-colors rounded-sm">
+                Seguir Comprando
+            </button>
+        </div>
+    </div>
+</aside>
+
+<!-- Toast Notification Container -->
+<div id="toastNotif" class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[99] translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center gap-3 bg-surface-container-highest border border-outline-variant/30 px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)] rounded-sm min-w-[280px] max-w-xs">
+        <span id="toastIcon" class="material-symbols-outlined text-secondary text-lg flex-shrink-0">check_circle</span>
+        <p id="toastMsg" class="font-label text-xs uppercase tracking-wider text-on-surface flex-1 truncate"></p>
+    </div>
+</div>

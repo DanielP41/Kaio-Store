@@ -1,0 +1,56 @@
+<!-- Header Component -->
+<header class="bg-surface-bright/60 backdrop-blur-[16px] w-full top-0 z-50 border-none shadow-[0_0_40px_rgba(255,144,106,0.1)] sticky">
+    <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1920px] mx-auto">
+        <a href="full.html" class="text-4xl md:text-5xl font-black italic text-[#ff906a] tracking-widest font-headline hover:opacity-80 transition-opacity">KAIO-STORE</a>
+        <div class="hidden lg:flex flex-1 max-w-xl mx-12">
+            <div class="relative w-full group">
+                <input id="searchInput" class="w-full bg-surface-container border-none focus:ring-1 focus:ring-secondary py-2.5 px-4 font-label text-sm placeholder:text-outline italic transition-all duration-300" placeholder="¿Qué estás buscando?" type="text" />
+                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline transition-colors duration-300 group-focus-within:text-secondary">search</span>
+                <div id="searchDropdown" class="hidden absolute top-full left-0 right-0 mt-1 bg-surface-container-high border border-outline-variant/20 shadow-[0_8px_32px_rgba(0,0,0,0.5)] z-[80] max-h-72 overflow-y-auto"></div>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div id="authBtn" class="relative cursor-pointer transition-transform hover:scale-105 active:scale-95" title="Mi cuenta">
+                <span id="authBtnIcon" class="material-symbols-outlined text-[34px] text-[#e5e3ff] hover:text-[#ff906a] transition-colors">account_circle</span>
+                <div id="authBtnAvatar" class="hidden w-9 h-9 flex items-center justify-center bg-gradient-to-br from-primary to-secondary rounded-sm">
+                    <span id="authBtnInitials" class="font-headline font-black text-sm text-[#0c0c1f] select-none"></span>
+                </div>
+            </div>
+            <div id="cartBtn" class="relative group cursor-pointer transition-transform hover:scale-105 active:scale-95">
+                <span class="material-symbols-outlined text-[34px] text-[#e5e3ff] hover:text-[#ff6c92] transition-colors">shopping_cart</span>
+                <span id="cartCount" class="absolute -top-2 -right-2 min-w-[20px] h-5 bg-tertiary text-on-tertiary text-[10px] font-bold px-1.5 rounded-sm hidden flex items-center justify-center">0</span>
+            </div>
+        </div>
+    </div>
+    <nav class="hidden md:flex justify-center gap-8 py-4 border-t border-outline-variant/20">
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="manga.html">Manga</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="comics.html">Cómics</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="figuras.html">Figuras</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="nuevos-ingresos.html">Nuevos ingresos</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="indumentaria.html">Indumentaria</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="tcg.html">Centro TCG</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="videojuegos.html">Videojuegos</a>
+        <a class="font-headline text-lg font-bold uppercase tracking-tighter text-[#e5e3ff] hover:text-[#00d2fd] transition-colors" href="ofertas.html">Ofertas</a>
+    </nav>
+</header>
+
+<div class="w-full bg-primary-container overflow-hidden flex items-center h-8 z-40 relative">
+    <div class="animate-marquee flex whitespace-nowrap items-center">
+        <div class="flex items-center gap-12 pr-12 text-on-primary-fixed">
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+        </div>
+        <div class="flex items-center gap-12 pr-12 text-on-primary-fixed" aria-hidden="true">
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+            <span class="font-label text-[10px] uppercase font-black tracking-widest">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $75 — ENTREGA EXPRÉS GLOBAL</span>
+            <span class="material-symbols-outlined text-[10px]">star</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">Accesorios TCG</title>
+  <desc id="desc">Ilustracion local para la seccion Centro TCG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="600" rx="28" fill="#111827"/>
+  <rect x="16" y="16" width="388" height="568" rx="20" fill="url(#bg)"/>
+  <rect x="92" y="136" width="236" height="308" rx="26" fill="#111827" fill-opacity="0.7" stroke="#f8fafc" stroke-opacity="0.38" stroke-width="6"/>
+  <rect x="126" y="176" width="168" height="220" rx="16" fill="#1e293b" stroke="#fb7185" stroke-width="8" stroke-opacity="0.7"/>
+  <rect x="144" y="202" width="132" height="26" rx="10" fill="#fda4af" fill-opacity="0.95"/>
+  <rect x="144" y="246" width="132" height="92" rx="16" fill="#0f172a" stroke="#f8fafc" stroke-opacity="0.3" stroke-width="4"/>
+  <path d="M146 362h128" stroke="#f8fafc" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  <rect x="36" y="38" width="196" height="46" rx="12" fill="#020617" fill-opacity="0.82"/>
+  <text x="50" y="68" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">ACCESORIOS</text>
+  <text x="42" y="512" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="800">Deck Box Pro</text>
+  <text x="42" y="550" fill="#f8fafc" fill-opacity="0.84" font-size="24" font-family="Arial, sans-serif">Binders · Sleeves · Deck Box</text>
+</svg>

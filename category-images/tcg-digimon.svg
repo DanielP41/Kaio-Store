@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img" aria-labelledby="title desc">
+  <title id="title">Carta estilo Digimon</title>
+  <desc id="desc">Ilustracion local para la seccion Centro TCG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="600" rx="28" fill="#111827"/>
+  <rect x="16" y="16" width="388" height="568" rx="20" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#e0f2fe" stroke-width="3">
+    <path d="M60 116h300M60 160h300M60 204h300M60 248h300M60 292h300M60 336h300M60 380h300M60 424h300"/>
+    <path d="M84 96v356M140 96v356M196 96v356M252 96v356M308 96v356"/>
+  </g>
+  <path d="M136 388c26-118 80-202 154-246 8 44 32 84 74 122-94 8-150 42-228 124z" fill="#38bdf8" fill-opacity="0.9"/>
+  <path d="M148 372c30-42 72-70 126-84-10 20-14 50-8 86-38 12-72 12-118-2z" fill="#e0f2fe" fill-opacity="0.9"/>
+  <path d="M144 156c42-20 82-22 126 0" fill="none" stroke="#e0f2fe" stroke-width="12" stroke-linecap="round"/>
+  <rect x="36" y="36" width="162" height="46" rx="12" fill="#020617" fill-opacity="0.72"/>
+  <text x="52" y="67" fill="#e0f2fe" font-size="26" font-family="Arial, sans-serif" font-weight="700">DIGIMON</text>
+  <text x="42" y="512" fill="#ecfeff" font-size="44" font-family="Arial, sans-serif" font-weight="800">Blast Ace</text>
+  <text x="42" y="550" fill="#dbeafe" fill-opacity="0.88" font-size="24" font-family="Arial, sans-serif">Booster · Starter · Box</text>
+</svg>

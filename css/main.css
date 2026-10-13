@@ -1,0 +1,644 @@
+/* Kaio-Store Main Styles */
+:root {
+    --primary: #ff906a;
+    --secondary: #00d2fd;
+    --tertiary: #ff6c92;
+    --surface: #0c0c1f;
+}
+
+.material-symbols-outlined { 
+    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; 
+}
+
+.glass-panel { 
+    background: rgba(12,12,31,0.6); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px); 
+}
+
+.text-glow-primary { 
+    text-shadow: 0 0 20px rgba(255,144,106,0.5); 
+}
+
+@keyframes marquee { 
+    0% { transform: translateX(0%); } 
+    100% { transform: translateX(-50%); } 
+}
+
+.animate-marquee { 
+    animation: marquee 20s linear infinite; 
+    width: max-content; 
+}
+
+.filter-chip { 
+    background: #17172f; 
+    color: #aaa8c3; 
+    border: 1px solid rgba(70,70,92,0.4); 
+}
+
+.filter-chip:hover { 
+    color: #e5e3ff; 
+    border-color: rgba(70,70,92,0.8); 
+}
+
+.filter-chip-active { 
+    background: #ff906a; 
+    color: #000; 
+    border: 1px solid #ff906a; 
+}
+
+.hide-scrollbar::-webkit-scrollbar { 
+    display: none; 
+}
+
+.hide-scrollbar { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+    background: #23233f;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #292948;
+}
+
+/* Shared section hero system */
+.section-hero {
+    position: relative;
+    height: 420px;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 50% 38%, rgba(255, 144, 106, 0.12), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(0, 210, 253, 0.12), transparent 26%),
+        linear-gradient(180deg, #131329 0%, #0c0c1f 100%);
+    --hero-object-position: center;
+}
+
+.section-hero-hidden {
+    display: none;
+}
+
+.section-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--hero-object-position);
+    transform: scale(1.03);
+}
+
+.section-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(12, 12, 31, 0.18) 0%, rgba(12, 12, 31, 0.45) 42%, rgba(12, 12, 31, 0.88) 100%),
+        radial-gradient(circle at 50% 52%, rgba(12, 12, 31, 0.14), rgba(12, 12, 31, 0.68) 72%);
+}
+
+.section-hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.section-hero-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: #ff906a;
+    color: #000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.section-hero-title {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #f2eeff;
+    text-shadow: 0 0 26px rgba(255, 144, 106, 0.34);
+}
+
+.section-hero-copy {
+    max-width: 40rem;
+    margin: 0;
+    color: #c8c4e7;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tcg-filter-shell {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    z-index: 20;
+    width: min(72rem, calc(100% - 2rem));
+    transform: translateX(-50%);
+}
+
+.tcg-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 1.125rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(7, 6, 24, 0.76);
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.tcg-filter-chip {
+    min-height: 2.75rem;
+    padding: 0.7rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tcg-filter-chip:hover,
+.tcg-filter-chip:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.tcg-filter-summary {
+    margin-top: 0.85rem;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c8c4e7;
+}
+
+.tcg-card-hidden {
+    display: none;
+}
+
+/* Shared catalog system */
+.catalog-section {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 6rem;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.catalog-card {
+    background: #17172f;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.catalog-card:hover {
+    background: #1d1d37;
+}
+
+.catalog-card-media {
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog-card-media-portrait {
+    aspect-ratio: 3 / 4;
+}
+
+.catalog-card-media-square {
+    aspect-ratio: 1 / 1;
+}
+
+.catalog-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.catalog-card:hover .catalog-card-image {
+    transform: scale(1.08);
+}
+
+.catalog-card-favorite {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.375rem;
+    background: rgba(12, 12, 31, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.catalog-card-favorite[data-active="true"],
+.catalog-card-favorite-visible {
+    opacity: 1;
+}
+
+.catalog-card:hover .catalog-card-favorite {
+    opacity: 1;
+}
+
+.catalog-card-content {
+    padding: 1rem;
+}
+
+.catalog-card-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    color: #00d2fd;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.catalog-card-title {
+    margin: 0.25rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.catalog-card-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalog-card-price {
+    color: #ff906a;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.catalog-card-cart {
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #ff906a, #ff7949);
+    color: #000;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.catalog-card-cart:hover {
+    box-shadow: 0 0 12px rgba(255, 144, 106, 0.5);
+}
+
+.empty-state-panel {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    min-height: 22rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, rgba(23, 23, 47, 0.96), rgba(17, 17, 39, 0.92));
+    border: 1px solid rgba(70, 70, 92, 0.24);
+    text-align: center;
+}
+
+.empty-state-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.empty-state-copy {
+    max-width: 34rem;
+    color: #aaa8c3;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.empty-state-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.cart-progress-track {
+    width: 100%;
+    height: 0.5rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cart-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00d2fd 0%, #ff906a 100%);
+    box-shadow: 0 0 18px rgba(255, 144, 106, 0.28);
+    transition: width 0.35s ease;
+}
+
+.cart-meta-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cart-meta-label {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.56rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #aaa8c3;
+}
+
+.cart-meta-value {
+    margin: 0.2rem 0 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.checkout-insight-card {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.checkout-insight-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #aaa8c3;
+}
+
+.checkout-insight-value {
+    margin-top: 0.35rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.checkout-insight-copy {
+    margin-top: 0.3rem;
+    color: #aaa8c3;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .section-hero {
+        height: 520px;
+    }
+
+    .section-hero-content {
+        gap: 1.25rem;
+        padding: 2rem;
+    }
+
+    .section-hero-copy {
+        font-size: 1.125rem;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalog-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Neon Kineticism Banner System */
+.hero-kinetic {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 4rem 10%;
+}
+
+.hero-kinetic-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-kinetic-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: grayscale(1) contrast(1.2);
+}
+
+.hero-kinetic-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(90deg, var(--surface) 20%, transparent 60%),
+        radial-gradient(circle at 80% 50%, rgba(0, 210, 253, 0.15), transparent 50%);
+    z-index: 1;
+}
+
+.hero-content-wrap {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+
+.hero-kinetic-badge {
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.hero-kinetic-badge::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--secondary);
+    transform: translateY(-50%);
+}
+
+.hero-kinetic-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.hero-kinetic-title span {
+    display: block;
+    color: var(--primary);
+    text-shadow: 0 0 30px rgba(255, 144, 106, 0.4);
+}
+
+.hero-kinetic-copy {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.125rem;
+    color: #aaa8c3;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+}
+
+.hero-kinetic-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-kinetic-primary {
+    background: var(--primary);
+    color: #000;
+    padding: 1rem 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-kinetic-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 144, 106, 0.3);
+}
+
+.btn-kinetic-outline {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-kinetic-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .hero-kinetic {
+        padding: 4rem 5%;
+        text-align: center;
+        justify-content: center;
+        min-height: 420px;
+    }
+    .hero-kinetic-overlay {
+        background: linear-gradient(180deg, rgba(12, 12, 31, 0.6) 0%, var(--surface) 100%);
+    }
+    .hero-kinetic-badge {
+        padding-left: 0;
+    }
+    .hero-kinetic-badge::before {
+        display: none;
+    }
+    .hero-kinetic-actions {
+        justify-content: center;
+    }
+    .hero-kinetic-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .catalog-section {
+        padding: 1rem 1rem 4rem;
+    }
+
+    .tcg-filter-shell {
+        bottom: 1rem;
+        width: calc(100% - 1rem);
+    }
+
+    .tcg-filter-bar {
+        gap: 0.55rem;
+        padding: 0.85rem;
+    }
+
+    .tcg-filter-chip {
+        min-height: 2.35rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 639px) {
+    .cart-meta-card {
+        padding: 0.8rem;
+    }
+
+    .catalog-card {
+        content-visibility: auto;
+        contain-intrinsic-size: 360px;
+    }
+}

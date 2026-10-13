@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manga | KAIO-STORE</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/config.js"></script>
+    <script src="js/seo.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+    <div id="header-container"></div>
+
+    <main>
+        <section class="section-hero relative overflow-hidden">
+            <img src="manga-hero-collage-bw.jpg" alt="Archivo Manga" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0c0c1f]/70 to-[#0c0c1f]"></div>
+            <div class="relative max-w-7xl mx-auto px-6 py-28">
+                <p class="font-label text-[10px] uppercase tracking-[0.4em] text-secondary">Vol. 01 · Cyber-Editorial</p>
+                <h1 class="font-headline text-7xl md:text-9xl font-black uppercase tracking-tighter mt-2 leading-[0.85]">Archivo<br/><span class="text-primary italic">Manga</span></h1>
+                <p class="font-body text-lg text-on-surface-variant max-w-2xl mt-6">Shōnen, seinen, shōjo y josei curados por la redacción de KAIO. Las últimas novedades y clásicos en stock — todos en español neutro y japonés cuando aplica.</p>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-16">
+            <div class="filter-container flex flex-wrap gap-2 mb-8">
+                <button class="filter-chip filter-chip-active px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="all">Todos</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="shonen">Shōnen</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="seinen">Seinen</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="shojo">Shōjo</button>
+            </div>
+            <div class="catalog-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="cart-container"></div>
+    <div id="whatsapp-container"></div>
+
+    <script src="js/products-data.js?v=20260503-1"></script>
+    <script src="js/catalog.js?v=20260509-1"></script>
+    <script src="js/cart.js?v=20260509-1"></script>
+    <script src="js/ui.js?v=20260509-1"></script>
+    <script src="js/supabase-store.js?v=20260509-1"></script>
+    <script src="js/components.js?v=20260423-1"></script>
+</body>
+</html>

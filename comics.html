@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómics | KAIO-STORE</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/config.js"></script>
+    <script src="js/seo.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body">
+
+    <div id="header-container"></div>
+
+    <main>
+        <section class="section-hero relative overflow-hidden">
+            <img src="invencible-scaled.jpg" alt="Cómics" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+            <div class="relative max-w-7xl mx-auto px-6 py-24">
+                <p class="font-label text-xs uppercase tracking-[0.32em] text-secondary">Sección</p>
+                <h1 class="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter mt-2">Cómics</h1>
+                <p class="font-body text-lg text-on-surface-variant max-w-2xl mt-4">DC, Marvel, novelas gráficas y ediciones especiales. Tapa dura, tapa blanda y omnibus.</p>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-16">
+            <div class="filter-container flex flex-wrap gap-2 mb-8">
+                <button class="filter-chip filter-chip-active px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="all">Todos</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="dc">DC</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="marvel">Marvel</button>
+                <button class="filter-chip px-4 py-2 font-label text-xs uppercase tracking-widest" data-filter="novelas">Novelas gráficas</button>
+            </div>
+            <div class="catalog-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="cart-container"></div>
+    <div id="whatsapp-container"></div>
+
+    <script src="js/products-data.js?v=20260503-1"></script>
+    <script src="js/catalog.js?v=20260509-1"></script>
+    <script src="js/cart.js?v=20260509-1"></script>
+    <script src="js/ui.js?v=20260509-1"></script>
+    <script src="js/supabase-store.js?v=20260509-1"></script>
+    <script src="js/components.js?v=20260423-1"></script>
+</body>
+</html>
